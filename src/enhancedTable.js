@@ -26,7 +26,11 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData('Cupcake', 305, 3.7, 67, 4.3),
+  createData(1, 
+    "Unable to Login", 
+    "User trying to logint with valid username/password but failing",
+    "Ayan", 
+    "New"),
   createData('Donut', 452, 25.0, 51, 4.9),
   createData('Eclair', 262, 16.0, 24, 6.0),
   createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
@@ -40,6 +44,8 @@ const rows = [
   createData('Nougat', 360, 19.0, 9, 37.0),
   createData('Oreo', 437, 18.0, 63, 4.0),
 ];
+
+console.log(rows)
 
 function desc(a, b, orderBy) {
   if (b[orderBy] < a[orderBy]) {
@@ -66,11 +72,11 @@ function getSorting(order, orderBy) {
 }
 
 const headRows = [
-  { id: 'name', numeric: false, disablePadding: true, label: 'Dessert (100g serving)' },
-  { id: 'calories', numeric: true, disablePadding: false, label: 'Calories' },
-  { id: 'fat', numeric: true, disablePadding: false, label: 'Fat (g)' },
-  { id: 'carbs', numeric: true, disablePadding: false, label: 'Carbs (g)' },
-  { id: 'protein', numeric: true, disablePadding: false, label: 'Protein (g)' },
+  { id: 'defid', numeric: false, disablePadding: true, label: 'ID' },
+  { id: 'calories', numeric: true, disablePadding: false, label: 'Name' },
+  { id: 'fat', numeric: true, disablePadding: false, label: 'Description' },
+  { id: 'carbs', numeric: true, disablePadding: false, label: 'Owner' },
+  { id: 'protein', numeric: true, disablePadding: false, label: 'Status' },
 ];
 
 function EnhancedTableHead(props) {

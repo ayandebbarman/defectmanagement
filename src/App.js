@@ -8,7 +8,7 @@ import EnhancedTable from './enhancedTable'
 function App() {
   return (
     <div>
-    <SimpleTable/>
+    {/* <SimpleTable/> */}
     <EnhancedTable/>
     </div>
   );
